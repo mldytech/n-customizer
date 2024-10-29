@@ -100,7 +100,11 @@ show_help() {
 install_packages() {
     echo "Installing packages: ${GENERAL_PACKAGES[*]} ${OOP_PACKAGES[*]} ${SET_PACKAGES[*]} ${CN_PACKAGES[*]} ${HPS_PACKAGES[*]}"
     sudo apt update
-    sudo apt install -y "${GENERAL_PACKAGES[@]} ${OOP_PACKAGES[@]} ${SET_PACKAGES[@]} ${CN_PACKAGES[@]} ${HPS_PACKAGES[@]}"
+    sudo apt install -y "${GENERAL_PACKAGES[@]}"
+    sudo apt install -y "${OOP_PACKAGES[@]}"
+    sudo apt install -y "${SET_PACKAGES[@]}"
+    sudo apt install -y "${CN_PACKAGES[@]}"
+    sudo apt install -y "${HPS_PACKAGES[@]}"
 }
 
 #install more apt packages
