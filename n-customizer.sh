@@ -99,28 +99,28 @@ show_help() {
 #install apt packages
 install_packages() {
     echo "Installing packages: ${GENERAL_PACKAGES[*]} ${OOP_PACKAGES[*]} ${SET_PACKAGES[*]} ${CN_PACKAGES[*]} ${HPS_PACKAGES[*]}"
-    sudo apt update
-    sudo apt install -y "${GENERAL_PACKAGES[@]}"
-    sudo apt install -y "${OOP_PACKAGES[@]}"
-    sudo apt install -y "${SET_PACKAGES[@]}"
-    sudo apt install -y "${CN_PACKAGES[@]}"
-    sudo apt install -y "${HPS_PACKAGES[@]}"
+    apt update
+    apt install -y "${GENERAL_PACKAGES[@]}"
+    apt install -y "${OOP_PACKAGES[@]}"
+    apt install -y "${SET_PACKAGES[@]}"
+    apt install -y "${CN_PACKAGES[@]}"
+    apt install -y "${HPS_PACKAGES[@]}"
 }
 
 #install more apt packages
 install_more_packages() {
     echo "Installing packages: ${MISC_PACKAGES[*]}"
-    sudo apt update
-    sudo apt install -y "${MISC_PACKAGES[@]}"
+    apt update
+    apt install -y "${MISC_PACKAGES[@]}"
 }
 
 #configure flatpak (flathub) and install some flatpaks
 install_flatpak() {
-    sudo apt install -y flatpak
+    apt install -y flatpak
     if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" ]]; then
-        sudo apt install gnome-software-plugin-flatpak
+        apt install gnome-software-plugin-flatpak
     elif [[ "$XDG_CURRENT_DESKTOP" == "KDE" ]]; then
-        sudo apt install plasma-discover-backend-flatpak
+        apt install plasma-discover-backend-flatpak
     else
         print_red "No Flatpak GUI plugin for desktop environment: $XDG_CURRENT_DESKTOP. You can still use the flatpak cli tool."
     fi    
@@ -147,8 +147,8 @@ install_flatpak() {
 
 #configure and enable ufw
 configure_firewall() {
-    sudo apt install -y ufw
-    sudo ufw enable
+    apt install -y ufw
+    ufw enable
     echo "ufw installed and enabled"
 }
 
@@ -165,9 +165,9 @@ install_vivado(){
 
 install_codium(){
     echo "installing vscodium"
-    wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-    echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
-    sudo apt update && sudo apt install codium
+    wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+    echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | tee /etc/apt/sources.list.d/vscodium.list
+    apt update && apt install codium
 }
 
 #install eclipse
