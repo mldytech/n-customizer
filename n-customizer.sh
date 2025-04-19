@@ -217,10 +217,10 @@ install_eclipse(){
 install_ltspice(){
     print_red "COMING SOON: Installing LTSpice through wine. Just click through the installer and keep the default settings."
     
-    #TEMP_DIR=$(mktemp -d)
-    #wget -O "$TEMP_DIR/LTSpice64.msi" "$LTSPICE_URL"
-    #wine "$TEMP_DIR/LTSpice64.msi"
-    #rm -rf "$TEMP_DIR"
+    TEMP_DIR=$(mktemp -d)
+    wget -O "$TEMP_DIR/LTSpice64.msi" "$LTSPICE_URL"
+    wine "$TEMP_DIR/LTSpice64.msi"
+    rm -rf "$TEMP_DIR"
 }
 
 mensa_alias(){
