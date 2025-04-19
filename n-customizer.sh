@@ -30,7 +30,7 @@ LOGFILE="n-customizer.log"
 # Planned Features:
 #   - Install and configure OpenConnect VPN (via. networkmanager)
 #   - For GNOME: Configure some useful extensions
-#   - More software via. wine (e. g. LTSpice, ARM Keil, ...)
+#   - More software via. wine (e. g. ARM Keil, ...)
 #
 # Credits:
 #   - to openmensa.org for providing the canteens api
