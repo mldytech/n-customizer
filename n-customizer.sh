@@ -74,7 +74,7 @@ SET_PACKAGES=("qtcreator" "libgl1-mesa-dev" "doxygen")
 IOT_PACKAGES=("wireshark" "docker.io" "docker-compose")
 MISC_PACKAGES=("docker.io" "docker-compose" "libreoffice" "thunderbird" "keepassxc" "wine" "vlc" "audacity" "xournalpp")
 FLATPAKS=("com.emqx.MQTTX" "com.github.tchx84.Flatseal" "org.raspberrypi.rpi-imager" "com.jgraph.drawio.desktop")
-ECLIPSE_URL="https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2024-09/R/eclipse-cpp-2024-09-R-linux-gtk-x86_64.tar.gz"
+ECLIPSE_URL="https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2025-03/R/eclipse-cpp-2025-03-R-linux-gtk-x86_64.tar.gz"
 LTSPICE_URL="https://ltspice.analog.com/software/LTspice64.msi"
 
 show_help() {
